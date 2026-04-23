@@ -4,7 +4,7 @@ const fetch = require("node-fetch");
 const app = express();
 app.use(express.json());
 
-const WEBHOOK_URL = "https://discord.com/api/webhooks/1496810301432004752/ORZ5oyeQS4vuAjAz5r67i2U4nKS8DF4kKP1doRUDqUMteX09Hk0Rq_2B3yKeVgC85e8g";
+const WEBHOOK_URL = process.env.WEBHOOK_URL;
 
 app.post("/chatlog", async (req, res) => {
     const { username, message, userId } = req.body;
