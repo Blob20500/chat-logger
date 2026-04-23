@@ -10,7 +10,7 @@ app.post("/chatlog", async (req, res) => {
     const { username, message, userId } = req.body;
 
     const embed = {
-        title: "Chat Logger",
+        title: "Chat Log",
         color: 3447003, // blue
         fields: [
             {
