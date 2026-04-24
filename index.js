@@ -6,6 +6,10 @@ app.use(express.json());
 
 const WEBHOOK_URL = process.env.WEBHOOK_URL;
 
+if (!WEBHOOK_URL) {
+    console.error("Webhook URL not set!");
+}
+
 app.post("/chatlog", async (req, res) => {
     const { username, message, userId } = req.body;
 
